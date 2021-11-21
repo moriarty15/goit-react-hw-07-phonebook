@@ -7,7 +7,7 @@ export const fetchContactsAsyncThunk = createAsyncThunk(
   async () => {
     try {
       const contacts = await fetchRequest();
-      return contacts;
+      return contacts.reverse();
     } catch (error) {
       alert(error);
     }
